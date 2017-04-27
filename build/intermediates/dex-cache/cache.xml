@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/keng/.android/build-cache/6da12bdccb7f84db670df2f66f030e49e0fae2d9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/keng/AndroidStudioProjects/mainpage/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4c46bf9ac00f2d6e2a40aec1eb577d4e68e35a90/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/keng/.android/build-cache/237d03e2f7d2f5182a118be7088f68760b979f5e/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -21,11 +30,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/keng/.android/build-cache/d0b36bea7744b65583a2ee8fbe2eb2ca92e02675/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="/Users/keng/AndroidStudioProjects/mainpage/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4fadc7da6dc7fcd37d0e27d7c8711dfd8bd2f99d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/keng/AndroidStudioProjects/mainpage/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="8184cab8c2ad95d8819330f7cd3f328c602020e4">
+        sha1="1f90f4a55b27c9e4d65515e4b6c24c1e45d1d29a">
         <dex dex="/Users/keng/AndroidStudioProjects/mainpage/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f811737627b6824082ddf7c47668920398e54c26/classes.dex" />
     </item>
 
