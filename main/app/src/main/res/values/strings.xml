@@ -8,4 +8,9 @@
     <string name="Text2">藉由手機APP訂單管理\n隨時掌握貨品動態。</string>
     <string name="Username">請輸入帳號</string>
     <string name="Password">請輸入密碼</string>
+    <string name="name">姓名</string>
+    <string name="account">帳號</string>
+    <string name="password">密碼</string>
+    <string name="confirm_pwd">確認密碼</string>
+    <string name="mail">信箱</string>
 </resources>
