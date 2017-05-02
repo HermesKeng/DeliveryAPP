@@ -48,8 +48,8 @@ public class IntroSlider extends AppCompatActivity {
         viewPager.setCurrentItem(0);
         //使用radioGroup將index得以顯示
         indicator=(RadioGroup)findViewById(R.id.indicator);
-        indicator.check(0);
-        radioButton.setChecked(true);
+        indicator.check(R.id.index1);
+       // radioButton.setChecked(true);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -83,9 +83,9 @@ public class IntroSlider extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    Intent i=new Intent(IntroSlider.this,Login.class);
-                    startActivity(i);
-                    finish();
+                Intent i=new Intent(IntroSlider.this,Login.class);
+                startActivity(i);
+                finish();
 
             }
         });
@@ -93,7 +93,7 @@ public class IntroSlider extends AppCompatActivity {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(IntroSlider.this,MainActivity.class);
+                Intent i=new Intent(IntroSlider.this,Register.class);
                 startActivity(i);
                 finish();
             }

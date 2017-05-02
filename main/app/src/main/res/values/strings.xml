@@ -6,4 +6,6 @@
     <string name="Text1">突破傳統的快遞、物流系統\n提供更快、更即時的服務。</string>
     <string name="introText2">即時訂單管理系統</string>
     <string name="Text2">藉由手機APP訂單管理\n隨時掌握貨品動態。</string>
+    <string name="Username">請輸入帳號</string>
+    <string name="Password">請輸入密碼</string>
 </resources>
