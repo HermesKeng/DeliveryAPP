@@ -27,7 +27,11 @@
             android:name=".IntroSlider"
             android:screenOrientation="portrait" />
         <activity android:name=".Login" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
+        <activity
+            android:name=".Mainpage"
+            android:label="@string/title_activity_mainpage"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

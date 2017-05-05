@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity {
                 //這邊可以加詢問資料庫是否有這筆帳戶資料
                 //如果可以才給登入
                 if(usr.getText()!=null&&pwd.getText()!=null){
-                    Intent i=new Intent(Login.this,MainActivity.class);
+                    Intent i=new Intent(Login.this,Mainpage.class);
                     startActivity(i);
                     finish();
                 }
