@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -80,6 +82,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             }
         });
 
+        //設定RecycleView的金額
+        RecyclerView recyclerView;
+        ArrayList<String> Dataset=new ArrayList<String>();
+        for(int i=0;i<10;i++){
+            Dataset.add(i+"");
+        }
+
+        MyAdapter myAdapter=new MyAdapter(Dataset);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+        recyclerView=(RecyclerView)view.findViewById(R.id.recyclerView);
+        //recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(myAdapter);
         return view;
     }
 
