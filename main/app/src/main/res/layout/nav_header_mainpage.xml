@@ -18,6 +18,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center"
-        android:paddingTop="100dp"
+        android:paddingTop="50dp"
         app:srcCompat="@drawable/navi_title" />
 </LinearLayout>
