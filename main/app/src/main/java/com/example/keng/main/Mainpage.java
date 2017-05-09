@@ -3,6 +3,7 @@ package com.example.keng.main;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
@@ -53,6 +54,7 @@ public class Mainpage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
         if(id==R.id.nav_home){
 
         }else if(id==R.id.nav_newOrder){
@@ -60,11 +62,16 @@ public class Mainpage extends AppCompatActivity
             FragmentManager fm=getSupportFragmentManager();
             FragmentTransaction trans=fm.beginTransaction();
             trans.addToBackStack(null);
-            trans.replace(R.id.frame,newOrderFragment);
+            trans.replace(R.id.frame,newOrderFragment,newOrderFragment.getTag());
             trans.commit();
 
         }else if(id==R.id.nav_history){
-
+            HistoryMainFragment historyMainFragment=new HistoryMainFragment();
+            FragmentManager fm=getSupportFragmentManager();
+            FragmentTransaction trans=fm.beginTransaction();
+            trans.addToBackStack(null);
+            trans.replace(R.id.frame,historyMainFragment);
+            trans.commit();
         }else if(id==R.id.nav_setting){
 
         }else if(id==R.id.nav_logout){

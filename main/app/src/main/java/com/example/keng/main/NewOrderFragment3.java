@@ -105,7 +105,10 @@ public class NewOrderFragment3 extends Fragment implements View.OnClickListener{
         HomeFragment hf=new HomeFragment();
         FragmentManager fm=getActivity().getSupportFragmentManager();
         FragmentTransaction trans=fm.beginTransaction();
-        trans.replace(R.id.frame,hf,hf.getTag());
+        //0509更新內容//
+        fm.popBackStack();
+        fm.popBackStack();
+        fm.popBackStack();
         Toast.makeText(getActivity(),"完成訂單登記",Toast.LENGTH_SHORT).show();
         trans.commit();
         //回到MainFragment
