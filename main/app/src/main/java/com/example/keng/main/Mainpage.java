@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,8 +18,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class Mainpage extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
+        implements NavigationView.OnNavigationItemSelectedListener ,NewOrderFragment3.ListComplete{
+        int index=0;
+    HomeFragment homeFragment;
+    NewOrderFragment newOrderFragment;
+    HistoryMainFragment historyMainFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +39,12 @@ public class Mainpage extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
+        if(savedInstanceState==null){
+            homeFragment=new HomeFragment();
+            newOrderFragment=new NewOrderFragment();
+            historyMainFragment=new HistoryMainFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.frame,homeFragment).commit();
+        }
     }
 
     @Override
@@ -56,22 +65,22 @@ public class Mainpage extends AppCompatActivity
 
 
         if(id==R.id.nav_home){
-
+            if(index!=0){
+                switchFragment(homeFragment,index);
+                index=0;
+            }
         }else if(id==R.id.nav_newOrder){
-            NewOrderFragment newOrderFragment=new NewOrderFragment();
-            FragmentManager fm=getSupportFragmentManager();
-            FragmentTransaction trans=fm.beginTransaction();
-            trans.addToBackStack(null);
-            trans.replace(R.id.frame,newOrderFragment,newOrderFragment.getTag());
-            trans.commit();
+            if(index!=1){
+                switchFragment(newOrderFragment,index);
+                index=1;
+            }
 
         }else if(id==R.id.nav_history){
-            HistoryMainFragment historyMainFragment=new HistoryMainFragment();
-            FragmentManager fm=getSupportFragmentManager();
-            FragmentTransaction trans=fm.beginTransaction();
-            trans.addToBackStack(null);
-            trans.replace(R.id.frame,historyMainFragment);
-            trans.commit();
+            if(index!=2){
+                switchFragment(historyMainFragment,index);
+                index=2;
+            }
+
         }else if(id==R.id.nav_setting){
 
         }else if(id==R.id.nav_logout){
@@ -81,5 +90,47 @@ public class Mainpage extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void switchFragment(Fragment to,int index){
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        switch (index){
+            case 0:
+                if(!to.isAdded()){
+                    transaction.addToBackStack(null);
+                    transaction.add(R.id.frame,to).hide(homeFragment).commit();
+                }else {
+                    transaction.addToBackStack(null);
+                    transaction.show(to).hide(homeFragment).commit();
+                }
+                break;
+            case 1:
+                if(!to.isAdded()){
+                    transaction.addToBackStack(null);
+                    transaction.add(R.id.frame,to).hide(newOrderFragment).commit();
+                }else {
+                    transaction.addToBackStack(null);
+                    transaction.show(to).hide(newOrderFragment).commit();
+                }
+                break;
+            case 2:
+                if(!to.isAdded()){
+                    transaction.addToBackStack(null);
+                    transaction.add(R.id.frame,to).hide(historyMainFragment).commit();
+                }else {
+                    transaction.addToBackStack(null);
+                    transaction.show(to).hide(historyMainFragment).commit();
+                }
+                break;
+
+
+        }
+
+
+    }
+    @Override
+    public void setIndex(int i){
+        index=i;
+        Log.d(getClass().getSimpleName(),"index 已更新");
     }
 }
