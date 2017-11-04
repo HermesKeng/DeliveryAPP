@@ -31,7 +31,7 @@ This is first glimpse of the app. In more details, we use Azure Platform to stor
 
 Each time if you want to reserve a car to deliver your package to other place, you only need to click "新增訂單" to create the order. You only need to follow three simple steps, and you can create it successfully. Besides, the delivery cost is going to show the money you spend on the bottom of page. 
 
-- Three Steps for creating the new order 
+- Three Steps For Creating The New Order 
   1. Choose time and location 
   2. Select the receiver
   3. Check the order information
@@ -39,4 +39,11 @@ Each time if you want to reserve a car to deliver your package to other place, y
 ![Order Step1](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/reserveStep1.png)
 ![Order Step2](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/reserveStep2.png)
 ![Order Step3](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/reserveStep3.png)
-  
+  
+After you create the new order, you can show the new order on the main activity. There are three different status which represent by three different color, red, orange, and gree on each card view.
+
+
+- Three Different Status On The Order
+  1. Red (Unsolved Order)
+  2. Orange (Order in process)
+  3. Green (Deliver successfully)
