@@ -50,3 +50,16 @@ After you create the new order, you can show the new order on the main activity.
 ![Unsolved Order](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/UnprocessStatus.png)
 ![Order in process](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/InprocessStatus.png)
 ![Deliver successfully](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/SuccessStatus.png)
+
+- Other Functions
+  - History
+  
+    If you want to see the order history, you can open the navigation bar and click "寄件紀錄" or "收件紀錄". We split all the history information into two section. One is sending information, the other is reveiving information. You can see all of the history on this activity, and you also can use filter to know each unsolved order, in process order and successful order
+
+![history](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/history.png)
+  
+  - Account Information
+  
+    You also can see the account information now , and edit your account info in your app. If you want to top up the money, you also can top it up on this page. 
+
+![Account Information](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/accountInfo.png)
