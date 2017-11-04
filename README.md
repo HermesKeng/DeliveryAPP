@@ -42,8 +42,11 @@ Each time if you want to reserve a car to deliver your package to other place, y
   
 After you create the new order, you can show the new order on the main activity. There are three different status which represent by three different color, red, orange, and gree on each card view.
 
-
 - Three Different Status On The Order
   1. Red (Unsolved Order)
   2. Orange (Order in process)
   3. Green (Deliver successfully)
+
+![Unsolved Order](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/UnprocessStatus.png)
+![Order in process](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/InprocessStatus.png)
+![Deliver successfully](https://github.com/HermesKeng/DeliveryAPP/blob/master/image/SuccessStatus.png)
